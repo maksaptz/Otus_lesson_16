@@ -15,6 +15,7 @@ Vagrant.configure(2) do |config|
     log.vm.provision "shell", path: "log.sh"
 
   end
+
   config.vm.define "web" do |web|
     web.vm.network "private_network", ip: "192.168.50.11", virtualbox__intnet: "net1"
     web.vm.hostname = "web"
